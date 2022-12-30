@@ -5,7 +5,7 @@ module.exports.getUser = async (req, res) => {
     res.send(user)
 }
 
-module.exports.saveUser = async (req, res) => {
+module.exports.createUser = async (req, res) => {
     const {name, latitude, longitude, favoritePlanet, photoUrl, notes, post, comment, postPhoto} = req.body;
 
     UserModel
