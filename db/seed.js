@@ -4,7 +4,7 @@ const User = require('../models/UserModel')
 const userData = require('./seed.json')
 
 User.deleteMany()
-    .then(() => CountQueuingStrategy.insertMany(userData))
+    .then(() => User.insertMany(userData))
     .then(console.log)
     .catch(console.error)
     .finally(process.exit)
