@@ -1,0 +1,12 @@
+{
+    "name": "doctasmooth",
+    "latitude": "-100",
+    "longitude": "100",
+    "favoritePlanet": ["Neptune", "Saturn"],
+    "photoUrl": "test.com",
+    "notes": ["testing notes"],
+    "post": ["post 1"],
+    "comment": ["comment 1"],
+    "postPhoto": ["post photo 1"]
+
+}
