@@ -17,3 +17,22 @@ module.exports.saveUser = async (req, res) => {
         })
         .catch((err) => console.log(err))
 }
+
+module.exports.deleteUser = async (req, res) => {
+    const { _id } = req.body;
+    console.log('id ---> ', _id);
+
+    UserModel
+        .findByIdAndDelete(_id)
+        .then(() => res.set(201).send('Delete success!'))
+        .catch((err) => console.log(err))
+}
+
+module.exports.updateUser = async (req, res) => {
+    const {_id, name, latitude, longitude, favoritePlanet, photoUrl, notes, post, comment, postPhoto} = req.body;
+
+    UserModel
+        .findByIdAndUpdate(_id, {name, latitude, longitude, favoritePlanet, photoUrl, notes, post, comment, postPhoto})
+        .then(() => res.set(201).send('update success'))
+        .catch((err) => console.log(err)) 
+}
