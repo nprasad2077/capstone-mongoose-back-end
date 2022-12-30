@@ -10,3 +10,4 @@ router.put('/update', updateUser)
 
 router.delete('/delete', deleteUser)
 
+module.exports = router
