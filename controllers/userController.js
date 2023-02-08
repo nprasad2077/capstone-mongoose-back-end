@@ -33,6 +33,6 @@ module.exports.updateUser = async (req, res) => {
 
     UserModel
         .findByIdAndUpdate(_id, {name, latitude, longitude, favoritePlanet, photoUrl, notes, post, comment, postPhoto})
-        .then(() => res.set(201).send('update success'))
+        .then(() => res.set(201).send('Update success'))
         .catch((err) => console.log(err)) 
 }
