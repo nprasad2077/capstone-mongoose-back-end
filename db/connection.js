@@ -8,6 +8,10 @@ require('dotenv').config()
 mongoose.set('strictQuery', true);
 let mongoURI = process.env.MONGODB_URL
 
+if (process.env.NODE_ENV !== "production") {
+  require("dotenv").config();
+}
+
 
 
 // Use Mongoose's connect method to connect to MongoDB by passing it the db URI.
